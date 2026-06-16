@@ -3,60 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CodeByEmmanuel | Frontend Developer</title>
+  <title>CodeByEmmanuel | About</title>
   <meta name="color-scheme" content="dark">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Syne:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="about.css">
 </head>
 <body class="fade">
 
-  <!-- Particle Background -->
   <canvas id="bg"></canvas>
 
-  <!-- FRAME CONTAINER -->
   <div class="frame">
 
-    <!-- Corner accents -->
     <div class="corner tl"></div>
     <div class="corner tr"></div>
     <div class="corner bl"></div>
     <div class="corner br"></div>
 
-    <!-- TOP-LEFT: Name + Role + CTA -->
+    <!-- TOP-LEFT: Name + role -->
     <div class="header">
       <h1>CodeByEmmanuel</h1>
-      <p class="role">Frontend Developer &amp; Web Designer — I build fast, modern websites for businesses &amp; startups.</p>
-      <a class="project-html" href="project.html">View my work</a>
+      <p class="role">Frontend Developer &amp; Web Designer</p>
     </div>
 
-    <!-- TOP-RIGHT: Availability status -->
-
+    <!-- TOP-RIGHT: Page label -->
+    <div class="page-label">About</div>
 
     <!-- LEFT CENTER: Navigation -->
     <nav class="menu">
       <a href="Index.html">Home</a>
-      <a href="projects.html">Projects</a>
+      <a href="project.html">Projects</a>
       <a href="About.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- BOTTOM-RIGHT: Bio -->
+    <!-- BOTTOM-RIGHT: Bio + Photo -->
     <div class="bio">
+
+      <!-- Photo -->
+      <img src="portfolio pic.jpeg" alt="Emmanuel" class="bio-photo">
+
+      <!-- Decorative line -->
+      <div class="bio-line"></div>
+
+      <!-- Text -->
       <p>
-        Based in <strong>Nigeria.</strong><br><br>
-        Passionate about creating clean, modern,
-        and user-friendly websites.<br><br>
-        Web design should be creative, fast,
-        and impactful. Currently deepening
-        skills in <strong>JavaScript,</strong>
-        and real-world projects every day.
-      </p>
+        I started coding in 2024, driven by a passion for building projects
+        and solving real world problems. I enjoy creating modern digital
+        experiences that are functional, clean, and impactful.
+     </p>
+
+     <p>
+      20 years old, originally from Bayelsa, now building and growing
+      from Lagos, Nigeria.
+    </p>
+
     </div>
 
-    <!-- BOTTOM-CENTER: Location tag -->
+    <!-- BOTTOM-CENTER: Location -->
     <div class="location-tag">Lagos · Nigeria</div>
 
-    <!-- LEFT EDGE: Mode switcher -->
+    <!-- LEFT EDGE: Side modes -->
     <div class="side-modes">
       <span>LIGHT</span>
       <span>DARK</span>
@@ -65,7 +71,6 @@
 
   </div>
 
-  <script src="index.js"></script>
-
+  <script src="about.js"></script>
 </body>
 </html>

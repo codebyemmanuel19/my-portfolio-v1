@@ -1,0 +1,219 @@
+/* ============================================================
+   ABOUT.CSS — CodeByEmmanuel Portfolio
+   (sized to match INDEX.CSS)
+   ============================================================ */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { background: #0a0a0a; height: 100%; }
+
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: #0a0a0a;
+  color: #eaeaea;
+  font-family: 'Syne', sans-serif;
+  overflow: hidden;
+}
+
+body.fade-in { opacity: 1; }
+
+canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ─── FRAME ────────────────────────────────────────────────── */
+
+.frame {
+  position: fixed;
+  inset: clamp(12px, 2.5vw, 28px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  z-index: 2;
+}
+
+/* ─── CORNERS ──────────────────────────────────────────────── */
+
+.corner { position: absolute; width: 10px; height: 10px; }
+.corner.tl { top:-1px; left:-1px; border-top:1px solid rgba(255,255,255,0.7); border-left:1px solid rgba(255,255,255,0.7); }
+.corner.tr { top:-1px; right:-1px; border-top:1px solid rgba(255,255,255,0.7); border-right:1px solid rgba(255,255,255,0.7); }
+.corner.bl { bottom:-1px; left:-1px; border-bottom:1px solid rgba(255,255,255,0.7); border-left:1px solid rgba(255,255,255,0.7); }
+.corner.br { bottom:-1px; right:-1px; border-bottom:1px solid rgba(255,255,255,0.7); border-right:1px solid rgba(255,255,255,0.7); }
+
+/* ─── HEADER — TOP LEFT (matches index) ───────────────────── */
+
+.header {
+  position: absolute;
+  top: clamp(28px, 5vh, 60px);
+  left: clamp(28px, 5vw, 72px);
+  max-width: clamp(240px, 38vw, 500px);
+  z-index: 3;
+}
+
+.header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 3.8vw, 54px);
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.15;
+  color: #ffffff;
+}
+
+.role {
+  margin-top: 12px;
+  font-size: clamp(15px, 1.4vw, 19px);
+  color: #aaaaaa;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 1.75;
+  max-width: 400px;
+}
+
+/* ─── PAGE LABEL — TOP RIGHT (matches status position) ────── */
+
+.page-label {
+  position: absolute;
+  top: clamp(28px, 5vh, 60px);
+  right: clamp(28px, 5vw, 80px);
+  font-size: clamp(13px, 1vw, 15px);
+  color: #aaaaaa;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+/* ─── NAV — LEFT CENTER (matches index) ────────────────────── */
+
+.menu {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: clamp(28px, 5vw, 72px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 2.5vh, 22px);
+  z-index: 3;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #aaaaaa;
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0%; height: 1px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover, .menu a.active { color: #ffffff; }
+.menu a:hover::after, .menu a.active::after { width: 100%; }
+
+/* ─── BIO — BOTTOM RIGHT (matches index sizing) ────────────── */
+
+.bio {
+  position: absolute;
+  right: clamp(28px, 5vw, 80px);
+  bottom: clamp(28px, 6vh, 72px);
+  max-width: clamp(220px, 28vw, 360px);
+  text-align: right;
+  z-index: 3;
+}
+
+/* Photo — sits above the bio text, same right alignment */
+.bio-photo {
+  width: clamp(90px, 12vw, 150px);
+  height: clamp(90px, 12vw, 150px);
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: auto;
+  display: block;
+  margin-bottom: 18px;
+  filter: grayscale(15%);
+  transition: all 0.4s ease;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+.bio-photo:hover {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.16);
+}
+
+/* Decorative line — same as index .bio::before, kept as element for the photo layout */
+.bio-line {
+  width: 36px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.bio p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 1.6vw, 23px);
+  line-height: 2.1;
+  color: #cccccc;
+  font-weight: 400;
+}
+
+.bio p + p {
+  margin-top: 14px;
+}
+
+.bio p strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ─── LOCATION TAG — BOTTOM CENTER (matches index) ─────────── */
+
+.location-tag {
+  position: absolute;
+  bottom: clamp(14px, 2.5vh, 28px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(11px, 1vw, 13px);
+  color: #666666;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+/* ─── SIDE MODES — LEFT EDGE (matches index) ───────────────── */
+
+.side-modes {
+  position: absolute;
+  left: clamp(6px, 0.8vw, 10px);
+  bottom: clamp(60px, 14vh, 110px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: clamp(9px, 0.85vw, 11px);
+  color: #666666;
+  letter-spacing: 2.5px;
+  z-index: 3;
+}
+
+.side-modes span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.side-modes span:hover { color: #bbbbbb; }
