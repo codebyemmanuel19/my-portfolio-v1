@@ -222,7 +222,7 @@ canvas {
   position: absolute;
   right: clamp(28px, 5vw, 80px);
   bottom: clamp(28px, 6vh, 72px);
-  max-width: clamp(180px, 38vw, 360px);
+  max-width: clamp(220px, 28vw, 360px);
   text-align: right;
   z-index: 3;
 }
@@ -239,8 +239,8 @@ canvas {
 
 .bio p {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(14px, 1.6vw, 23px);
-  line-height: 1.8;
+  font-size: clamp(18px, 1.6vw, 23px);
+  line-height: 2.1;
   color: #cccccc;
   font-weight: 400;
 }
@@ -292,67 +292,3 @@ canvas {
 }
 
 
-/* ─── MOBILE FIX (max 768px) ──────────────────────────────── */
-@media (max-width: 768px) {
-
-  body {
-    overflow-y: auto;
-  }
-
-  .header {
-    top: clamp(20px, 4vh, 40px);
-    left: clamp(16px, 4vw, 28px);
-    max-width: 55vw;
-  }
-
-  .header h1 {
-    font-size: clamp(24px, 6vw, 36px);
-  }
-
-  .role {
-    font-size: 13px;
-    line-height: 1.6;
-  }
-
-  .project-html {
-    font-size: 13px;
-    padding: 9px 18px;
-  }
-
-  .status {
-    top: clamp(20px, 4vh, 40px);
-    right: clamp(16px, 4vw, 28px);
-    font-size: 11px;
-  }
-
-  .menu {
-    top: 52%;
-    left: clamp(16px, 4vw, 28px);
-    gap: 10px;
-  }
-
-  .menu a {
-    font-size: 13px;
-  }
-
-  .bio {
-    right: clamp(16px, 4vw, 28px);
-    bottom: clamp(40px, 8vh, 80px);
-    max-width: 42vw;
-  }
-
-  .bio p {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-  .location-tag {
-    font-size: 10px;
-    letter-spacing: 3px;
-    bottom: clamp(10px, 2vh, 20px);
-  }
-
-  .side-modes {
-    display: none;
-  }
-}
