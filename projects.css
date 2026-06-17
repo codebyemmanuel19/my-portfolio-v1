@@ -321,3 +321,22 @@ canvas {
 }
 
 .side-modes span:hover { color: #bbbbbb; } /* was #aaaaaa */
+
+
+/* ============================================================
+   iPhone 13 Fix
+   Keeps your design exactly the same
+   ============================================================ */
+
+@media (max-width: 430px) {
+
+  .bio-content {
+    bottom: 30px;
+    max-height: 50vh;
+  }
+
+  .project-item {
+    padding: 35px 0;
+  }
+
+}
