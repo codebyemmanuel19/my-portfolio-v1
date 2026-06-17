@@ -305,14 +305,15 @@ textarea {
 .side-modes span:hover { color: #bbbbbb; } /* was #aaaaaa */
 
 
-/* ============================================================
-   iPhone 13 About Page Fix
-   ============================================================ */
-
 @media (max-width: 430px) {
 
-  .bio {
-    bottom: 10px;
+  .contact-content {
+    bottom: 20px;
+    max-height: 58vh;
+  }
+
+  .direct-contact {
+    margin-top: 50px;
   }
 
 }
